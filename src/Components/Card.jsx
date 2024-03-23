@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react";
+import { ContextGlobal } from "./utils/global.context";
 
 
 const Card = ({ name, username, id }) => {
+  const { state, dispatch } = useContext(ContextGlobal);
 
   const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+    dispatch({ type: "ADD_FAVORITE", payload: item });
   }
 
   return (
