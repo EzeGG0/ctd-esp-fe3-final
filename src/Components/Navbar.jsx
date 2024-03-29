@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src='../public/images/DH.png'/>
+      <img src='/images/DH.png'/>
       <button onClick={handleThemeChange} className='navButton'>Change theme</button>
       <Link to='/'>Home</Link>
       <Link to='/favs'>Favs</Link>
