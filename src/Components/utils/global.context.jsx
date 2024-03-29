@@ -1,12 +1,15 @@
 import { createContext } from "react";
 import { useReducer } from "react";
 import reducer from "./reducer";
+import GlobalStyles from "../GlobalStyle";
+
+const IsFavorites = JSON.parse(localStorage.getItem('favorites'));
 
 export const initialState = {
   theme: "light",
   data: [],
   dentist: {},
-  favorites: []
+  favorites: IsFavorites || []
 }
 
 export const ContextGlobal = createContext(undefined);
@@ -34,7 +37,9 @@ export const ContextProvider = ({ children }) => {
 
   return (
     <ContextGlobal.Provider value={value}>
+      <GlobalStyles theme={state.theme}> 
       {children}
+      </GlobalStyles>
     </ContextGlobal.Provider>
   );
 };

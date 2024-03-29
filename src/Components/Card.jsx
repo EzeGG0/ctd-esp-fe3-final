@@ -17,9 +17,10 @@ const Card = ({ name, username, id }) => {
           <h2>{name}</h2>
           <p>{username}</p>
           <Link to={`/details/${id}`}>Ver detalles</Link>
+          <button onClick={() => handleAddFavorite({ name, username, id })} className="favButton">Add fav</button>
         </div>
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={() => handleAddFavorite({ name, username, id })} className="favButton">Add fav</button>
+        
     </div>
   );
 };

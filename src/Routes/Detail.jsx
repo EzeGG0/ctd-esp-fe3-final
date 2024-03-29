@@ -1,10 +1,12 @@
 import axios from 'axios';
+import { useContext } from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
+import { ContextGlobal } from '../Components/utils/global.context';
 
 const Detail = () => {
-  const {id}= useParams();
+  const { id }= useParams();
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

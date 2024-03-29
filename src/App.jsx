@@ -18,13 +18,13 @@ function App() {
         <>
             <ContextProvider>
                 <BrowserRouter>
+                  <Navbar/>
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="contact" element={<Contact />}/>
                     <Route path="/favs" element={<Favs />} />
-                    <Route path="/details" element={<Detail />} />
+                    <Route path="/details/:id" element={<Detail />} />
                   </Routes>
-                  <Navbar/>
                   <Footer/>
                 </BrowserRouter>
             </ContextProvider>

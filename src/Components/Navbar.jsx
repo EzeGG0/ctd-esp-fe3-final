@@ -5,10 +5,10 @@ import { ContextGlobal } from './utils/global.context';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
-  const { handleThemeChange, state } = useContext(ContextGlobal);
+  const { handleThemeChange } = useContext(ContextGlobal);
 
   return (
-    <nav className={state.theme}>
+    <nav>
       <img src='../public/images/DH.png'/>
       <button onClick={handleThemeChange} className='navButton'>Change theme</button>
       <Link to='/'>Home</Link>
